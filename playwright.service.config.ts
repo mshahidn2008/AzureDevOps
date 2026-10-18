@@ -22,8 +22,9 @@ export default defineConfig(
     If you're already using other reporters, add them to this array.
     */
       reporter: [
-       ["html", { open: "never" }],
-       ["@azure/playwright/reporter"],
-     ],
+        ['html', { open: 'never' }],
+        ['allure-playwright', { resultsDir: 'allure-results', cleanResults: true }],
+        ['@azure/playwright/reporter'],
+      ],
   }
 );
